@@ -4,7 +4,7 @@
 
 *Require Kirby 2.3*
 
-With this plugin a page can be scheduled. With scheduled on a future date and time it will not be visible until that datetime has passed.
+Write the pages today, automatically publish them in the future.
 
 ![](https://github.com/jenstornell/kirby-scheduled-pages/blob/master/docs/scheduled.gif)
 
