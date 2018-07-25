@@ -36,8 +36,7 @@ Filter a collection by scheduled pages.
 ```php
 $collection = page('blog')->children()->scheduled();
 foreach($collection as $item) {
-  if($item->scheduled())
-    echo 'Scheduled page';
+  echo $item->title();
 }
 ```
 
