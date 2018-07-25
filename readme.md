@@ -16,7 +16,9 @@ scheduled:
   default: now
 ```
 
-That's it! When you visit a scheduled page, you will see the error page with a 404 respose.
+That's it!
+
+When you visit a scheduled page (a future scheduled date), you will see the error page with a 404 respose.
 
 ### Page methods
 
@@ -45,3 +47,5 @@ You can also filter the collection by non scheduled pages. Just send `false` as 
 ```php
 $collection = page('blog')->children()->scheduled(false);
 ```
+
+Thanks to @jimbobrjames for the argument idea.
