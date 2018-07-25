@@ -1,5 +1,5 @@
 <?php
-Kirby::plugin('jenstornell/scheduled-pages', [
+Kirby::plugin('jenstornell/scheduled', [
     'hooks' => [
         'route:after' => function ($route, $path, $method, $result) {
             if(!isset($result) || !property_exists($result, 'content')) return;
