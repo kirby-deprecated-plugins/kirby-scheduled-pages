@@ -1,5 +1,5 @@
 <?php
-Kirby::plugin('jenstornell/scheduled', [
+Kirby::plugin('jenstornell/scheduled-pages', [
     'hooks' => [
         'route:after' => function ($route, $path, $method, $result) {
             if(!isset($result) || !property_exists($result, 'content')) return;
@@ -27,4 +27,9 @@ Kirby::plugin('jenstornell/scheduled', [
             return $this->filterBy('scheduled', '!=', true);
         }
     ],
+    'collections' => [
+        'scheduled' => function($site) {
+            return $site->index()->scheduled();
+        }
+    ]
 ]);

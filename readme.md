@@ -48,4 +48,11 @@ You can also filter the collection by non scheduled pages. Just send `false` as 
 $collection = page('blog')->children()->scheduled(false);
 ```
 
-Thanks to @jimbobrjames for the argument idea.
+### Collection
+
+Get all pages on the site that is scheduled.
+
+```php
+$collection = $kirby->collection('scheduled');
+print_r($collection);
+```
