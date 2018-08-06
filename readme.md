@@ -1,17 +1,19 @@
 # Kirby Scheduled
 
-**Requirement:** Kirby 3
+- **Requirement:** Kirby 3
+- [Disclaimer](https://devonera.se/docs/disclaimer/?user=jenstornell&plugin=kirby-scheduled-pages)
+- [Donate](https://devonera.se/docs/donate/?user=jenstornell&plugin=kirby-scheduled-pages)
 
 ## Tiny docs
 
 ### Blueprint
 
-Use a `date` or a `datetime` field. It's required to use `scheduled` as key.
+Use a `date` or a `schedule_until` field. It's required to use `schedule_until` as key.
 
 ```yaml
-scheduled:
-  label: Publish in the future
-  type: date
+schedule_until:
+  label: Schedule until
+  type: schedule_until
   time: false
   default: now
 ```
@@ -26,7 +28,7 @@ In a collection loop you can se if the page is scheduled or not.
 
 ```php
 foreach($collection as $item) {
-  if($item->scheduled())
+  if($item->isScheduled())
     echo 'Scheduled page';
 }
 ```

@@ -4,8 +4,9 @@ Kirby::plugin('jenstornell/scheduled-pages', [
         'route:after' => function ($route, $path, $method, $result) {
             if(!isset($result) || !property_exists($result, 'content')) return;
 
-            $timestamp = strtotime($result->content()->scheduled());
-            if($timestamp != 0 && $timestamp > time()) {
+            $timestamp = strtotime($result->content()->schedule_until());
+
+            if($timestamp && $timestamp > time()) {
                 header('HTTP/1.0 404 Not Found');
                 echo page((string)site()->errorPage())->render();
                 die;
@@ -13,9 +14,9 @@ Kirby::plugin('jenstornell/scheduled-pages', [
         }
     ],
     'pageMethods' => [
-        'scheduled' => function() {
-            $timestamp = strtotime($this->content()->scheduled());
-            if($timestamp !=0 && $timestamp > time())
+        'isScheduled' => function() {
+            $timestamp = strtotime($this->content()->schedule_until());
+            if($timestamp && $timestamp > time())
                 return true;
             return false;
         }
@@ -31,5 +32,14 @@ Kirby::plugin('jenstornell/scheduled-pages', [
         'scheduled' => function($site) {
             return $site->index()->scheduled();
         }
+    ],
+    'fields' => [
+        'schedule_until' => [
+            'props' => [
+                'value' => function ($value = null) {
+                    return $value;
+                }
+            ],
+        ],
     ]
 ]);
