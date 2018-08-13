@@ -1,14 +1,12 @@
 # Kirby Scheduled
 
-- **Version:** 0.4 beta
+- **Version:** 0.5 beta
 - **Requirement:** Kirby 3
 - [**Changelog**](docs/changelog.md)
 - [Disclaimer](https://devonera.se/docs/disclaimer/?user=jenstornell&plugin=kirby-scheduled-pages)
 - [Donate](https://devonera.se/docs/donate/?user=jenstornell&plugin=kirby-scheduled-pages)
 
-## Tiny docs
-
-### Blueprint
+## Blueprint
 
 Use a `date` or a `schedule_until` field. It's required to use `schedule_until` as key.
 
@@ -24,7 +22,7 @@ That's it!
 
 When you visit a scheduled page (a future scheduled date), you will see the error page with a 404 respose.
 
-### Page methods
+## Page methods
 
 In a collection loop you can se if the page is scheduled or not.
 
@@ -35,7 +33,7 @@ foreach($collection as $item) {
 }
 ```
 
-### Pages methods
+## Pages methods
 
 Filter a collection by scheduled pages.
 
@@ -52,7 +50,7 @@ You can also filter the collection by non scheduled pages. Just send `false` as 
 $collection = page('blog')->children()->scheduled(false);
 ```
 
-### Collection
+## Collection
 
 Get all pages on the site that is scheduled.
 
@@ -60,3 +58,17 @@ Get all pages on the site that is scheduled.
 $collection = $kirby->collection('scheduled');
 print_r($collection);
 ```
+
+## Options
+
+The options can be set into the options file.
+
+```php
+return [
+  'jenstornell.scheduled-pages.active' => true
+];
+```
+
+### `active`
+
+You can disable the plugin hook by setting this value to `false`. That way you can roll out your own hook if needed.

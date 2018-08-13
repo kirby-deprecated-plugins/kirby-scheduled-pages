@@ -1,5 +1,10 @@
 # Changelog
 
+### 0.5 beta
+
+- Added Composer support. Hope it works.
+- Added better dependency to the date field.
+
 ### 0.4 beta
 
 - Removed red border as it looked like something was wrong with the input.

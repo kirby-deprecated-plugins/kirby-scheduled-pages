@@ -1,0 +1,8 @@
+{
+  "name": "jenstornell/kirby-scheduled-pages",
+  "description": "Schedule your pages",
+  "version": "0.5",
+  "autoload": {
+    "files": ["config.php"]
+  }
+}
