@@ -2,7 +2,7 @@
 
 - **Version:** 0.4 beta
 - **Requirement:** Kirby 3
-- **Changelog:** [Changelog](docs/changelog.md)
+- [**Changelog**](docs/changelog.md)
 - [Disclaimer](https://devonera.se/docs/disclaimer/?user=jenstornell&plugin=kirby-scheduled-pages)
 - [Donate](https://devonera.se/docs/donate/?user=jenstornell&plugin=kirby-scheduled-pages)
 
