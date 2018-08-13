@@ -7,9 +7,9 @@ panel.plugin("jenstornell/scheduled-pages", {
       },
       computed: {
         isScheduled: function() {
-          const date = new Date(this.value)
-          const now = new Date()
-          return now < date
+          const date = new Date(this.value);
+          const now = new Date();
+          return now < date;
         },
         icon: function() {
             return (this.isScheduled) ? 'clock' : 'check';
@@ -22,7 +22,6 @@ panel.plugin("jenstornell/scheduled-pages", {
       },
 
       template: `
-      
         <k-date-field :label="label" v-bind:class="{ schedule_until: isScheduled }" v-model="value" v-bind="$attrs" @input="onInput()" ref="input" v-bind:icon="icon">
           {{value}}
         </k-date-field>
