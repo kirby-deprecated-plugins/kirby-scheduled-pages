@@ -2,6 +2,7 @@ panel.plugin("jenstornell/scheduled-pages", {
   fields: {
     schedule_until: {
       props: {
+        label: String,
         value: String,
       },
       computed: {
@@ -11,7 +12,7 @@ panel.plugin("jenstornell/scheduled-pages", {
           return now < date
         },
         icon: function() {
-            return (this.isScheduled()) ? 'lock' : 'check';
+            return (this.isScheduled) ? 'clock' : 'check';
         }
       },
       methods: {
@@ -21,9 +22,10 @@ panel.plugin("jenstornell/scheduled-pages", {
       },
 
       template: `
-      <k-date-field v-bind:class="{ schedule_until: isScheduled }" v-model="value" v-bind="$attrs" @input="onInput()" ref="input" icon="icon()">
-        {{value}}
-      </k-date-field>
+      
+        <k-date-field :label="label" v-bind:class="{ schedule_until: isScheduled }" v-model="value" v-bind="$attrs" @input="onInput()" ref="input" v-bind:icon="icon">
+          {{value}}
+        </k-date-field>
       `
     }
   }

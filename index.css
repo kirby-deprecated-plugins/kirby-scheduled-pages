@@ -1,3 +1,7 @@
-.k-date-field.schedule_until[type="schedule_until"] .k-input {
-    border: 1px #B93832 solid;
+[type="schedule_until"] .k-icon {
+    color: #5d800d;
+}
+
+[type="schedule_until"].schedule_until .k-icon {
+    color: #c82829;
 }

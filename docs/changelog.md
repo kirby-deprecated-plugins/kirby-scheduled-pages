@@ -1,5 +1,12 @@
 # Changelog
 
+### 0.4 beta
+
+- Removed red border as it looked like something was wrong with the input.
+- Added icon switch to indicate if the page is scheduled or not.
+- Added icon color to make it even more visible if the page is scheduled or not.
+- Fixed so that label now work.
+
 ### 0.3 beta
 
 - Changed `$page->scheduled()` to `$page->isScheduled()`, suggested by [@distantnative](https://github.com/distantnative).
