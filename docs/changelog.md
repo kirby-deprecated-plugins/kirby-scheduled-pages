@@ -1,9 +1,14 @@
 # Changelog
 
+### 0.6 beta
+
+- Prepared for plugin name change from `Kirby Scheduled Pages` to `Kirby Schedule`.
+
 ### 0.5 beta
 
 - Added Composer support. Hope it works.
 - Added better dependency to the date field.
+- Added option `jenstornell.scheduled-pages.active`. When it's set to `false`, the hook is not triggered so you can set your own.
 
 ### 0.4 beta
 

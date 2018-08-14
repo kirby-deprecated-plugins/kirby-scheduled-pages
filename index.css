@@ -1,7 +1,7 @@
-[type="schedule_until"] .k-icon {
+[type="schedule"] .k-icon {
     color: #5d800d;
 }
 
-[type="schedule_until"].schedule_until .k-icon {
+[type="schedule"].schedule_until .k-icon {
     color: #c82829;
 }

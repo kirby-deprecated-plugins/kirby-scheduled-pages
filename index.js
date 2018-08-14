@@ -1,9 +1,9 @@
-panel.plugin("jenstornell/scheduled-pages", {
+panel.plugin("jenstornell/schedule", {
   fields: {
-    schedule_until: {
+    schedule: {
       props: {
         label: String,
-        value: String,
+        value: String
       },
       computed: {
         isScheduled: function() {

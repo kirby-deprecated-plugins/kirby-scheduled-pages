@@ -1,6 +1,6 @@
 # Kirby Scheduled
 
-- **Version:** 0.5 beta
+- **Version:** 0.6 beta
 - **Requirement:** Kirby 3
 - [**Changelog**](docs/changelog.md)
 - [Disclaimer](https://devonera.se/docs/disclaimer/?user=jenstornell&plugin=kirby-scheduled-pages)
@@ -8,12 +8,12 @@
 
 ## Blueprint
 
-Use a `date` or a `schedule_until` field. It's required to use `schedule_until` as key.
+Use the field type `schedule`. It's required to use `schedule_until` as key.
 
 ```yaml
 schedule_until:
   label: Schedule until
-  type: schedule_until
+  type: schedule
   time: false
   default: now
 ```
@@ -65,7 +65,7 @@ The options can be set into the options file.
 
 ```php
 return [
-  'jenstornell.scheduled-pages.active' => true
+  'jenstornell.schedule.active' => true
 ];
 ```
 

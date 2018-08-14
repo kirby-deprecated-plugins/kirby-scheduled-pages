@@ -1,12 +1,12 @@
 <?php
-Kirby::plugin('jenstornell/scheduled-pages', [
+Kirby::plugin('jenstornell/schedule', [
   'options' => [
     'active' => true
   ],
   'hooks' => [
       'route:after' => function ($route, $path, $method, $result) {
           if(!isset($result) || !property_exists($result, 'content')) return;
-          if(!option('jenstornell.scheduled-pages.active')) return;
+          if(!option('jenstornell.schedule.active')) return;
 
           $timestamp = strtotime($result->content()->schedule_until());
 
@@ -38,6 +38,6 @@ Kirby::plugin('jenstornell/scheduled-pages', [
       }
   ],
   'fields' => [
-      'schedule_until' => include kirby()->root('kirby') . '/config/fields/date.php'
+      'schedule' => include kirby()->root('kirby') . '/config/fields/date.php'
   ]
 ]);
