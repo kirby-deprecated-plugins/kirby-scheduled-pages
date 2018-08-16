@@ -1,7 +1,7 @@
 # Kirby Scheduled
 
-- **Version:** 0.6 beta
-- **Requirement:** Kirby 3
+- **Version:** 0.7 beta
+- **Requirement:** Kirby 3 - Nightly 2018-08-15
 - [**Changelog**](docs/changelog.md)
 - [Disclaimer](https://devonera.se/docs/disclaimer/?user=jenstornell&plugin=kirby-scheduled-pages)
 - [Donate](https://devonera.se/docs/donate/?user=jenstornell&plugin=kirby-scheduled-pages)

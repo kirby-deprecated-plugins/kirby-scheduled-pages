@@ -1,5 +1,12 @@
 # Changelog
 
+### 0.7 beta
+
+- Added improved UI to to page status in the bar.
+- Changed the field icon to now longer be red/green. Instead I removed the check and only kept the clock. That way, the status in the bar handles the color and the field looks like all other fields.
+- Better check for route environment.
+- Fixed some bugs in the methods.
+
 ### 0.6 beta
 
 - Prepared for plugin name change from `Kirby Scheduled Pages` to `Kirby Schedule`.
